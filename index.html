@@ -1,585 +1,91 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <!-- Required meta tags -->
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <script src="jquery.js"></script>
-        <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css?fbclid=IwAR20YljHUaRpmC_9YKoZPNr78eVvvkPLsulPJ-dX3uByDXrE9mL3Yhp65h8">
-        <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-        <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <link rel="stylesheet" type="text/css" href="style.css">
-        <title>Final Project</title>
-    </head>
-    <body>
-        <header>
-            <div class="header-content">
 
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="jquery.js"></script>
+    <link rel="stylesheet" type="text/css"
+        href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css?fbclid=IwAR20YljHUaRpmC_9YKoZPNr78eVvvkPLsulPJ-dX3uByDXrE9mL3Yhp65h8">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script>
+        function imgExpand(imgs) {
+            var expandImg = document.getElementById("expandedImg");
+            var imgText = document.getElementById("imgtext");
+            expandImg.src = imgs.src;
+            imgText.innerHTML = imgs.alt;
+            expandImg.parentElement.style.display = "block";
+            let black = document.getElementById("blackDeep");
+            black.style.display = "block";
+        }
+
+        function bookForward() {
+            window.location.href = "https://google.com/search?q=book+form"
+        }
+    </script>
+    <title>Final Project</title>
+</head>
+
+<body>
+    <header>
+        <div class="header-content">
+            <p>put some words here as a menu bar</p>
+        </div>
+    </header>
+    <main>
+        <section class="main-content">
+            <div class="img-expand">
+                <div id="blackDeep" onclick="this.parentElement.style.display='none'"></div>
+                <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+                <img id="expandedImg" style="width:100%">
+                <div id="imgtext"></div>
             </div>
-        </header>
-        <main>
-            <section class="main-content">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-5">
-                            <img class="room-img" src="images/double-bed.jpg" alt="double bed"> 
-                        </div>
-                        <div class="col-md-7">
-                            <div class="room-title">
-                                <h3 class="room-title-header">Double Bed</h3>
-                            </div>
-                            <div class="room-descript">
-                                
-                            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-5">
+                        <div class="img-part">
+                            <img class="room-img" src="images/double-bed.jpg" alt="double bed"
+                                onclick="imgExpand(this)">
+                            <span class="tooltiptext">Click to expand</span>
                         </div>
                     </div>
-                </div>
-            </section>
-        </main>
-        <footer>
-            <section class="section_13 block_2">
-                <div class="gap-element" style="display:block; height:auto; padding-top:100px"></div>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-3">
-                            <div class="b11-image">
-                                <img src="images/best-summer-logo.png">
-                            </div>
-                            <div class="b11-mid-content">
-                                <p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur.</p>
-                            </div>
-                            <div class="social-media">
-                                <span>
-                                    <a href="#">
-                                        <i class="fa fa-facebook" aria-hidden="true"></i>
-                                    </a>
-                                </span>
-                                <span>
-                                    <a href="#">
-                                        <i class="fa fa-instagram" aria-hidden="true"></i>
-                                    </a>
-                                </span>
-                                <span>
-                                    <a href="#">
-                                        <i class="fa fa-twitter" aria-hidden="true"></i>
-                                    </a>
-                                </span>
-                                <span>
-                                    <a href="#">
-                                        <i class="fa fa-google-plus" aria-hidden="true"></i>
-                                    </a>
-                                </span>
-                            </div>
+                    <div class="col-md-7">
+                        <div class="room-title">
+                            <h3 class="room-title-header">Double Bed</h3>
                         </div>
-                        <div class="col-md-9">
-                            <div class="tabs">
-                                <ul>
-                                    <li>
-                                        <a href="#tabs-4" style="height: 40px;">Useful link</a>
-                                    </li>
-                                    <li>
-                                        <a href="#tabs-5" style="height: 40px;">Tour Booking</a>
-                                    </li>
-                                    <li>
-                                        <a href="#tabs-6" style="height: 40px;">Leisure Trips</a>
-                                    </li>
-                                </ul>
-                                <div id="tabs-4" class="tab-part">
-                                    <div class="container">
-                                        <div class="row">
-                                            <div class="col-sm-3 col-6">
-                                                <p>
-                                                    <a href="#">
-                                                        <i class="fa fa-caret-right" aria-hidden="true"></i>Du lịch Hà Nội </a>
-                                                </p>
-                                                <p>
-                                                    <a href="#">
-                                                        <i class="fa fa-caret-right" aria-hidden="true"></i>Du lịch Sa Pa </a>
-                                                </p>
-                                                <p>
-                                                    <a href="#">
-                                                        <i class="fa fa-caret-right" aria-hidden="true"></i>Du lịch Côn Đảo </a>
-                                                </p>
-                                                <p>
-                                                    <a href="#">
-                                                        <i class="fa fa-caret-right" aria-hidden="true"></i>Du lịch Phú Quốc </a>
-                                                </p>
-                                                <p>
-                                                    <a href="#">
-                                                        <i class="fa fa-caret-right" aria-hidden="true"></i>Du lịch Đà Nẵng </a>
-                                                </p>
-                                                <p>
-                                                    <a href="#">
-                                                        <i class="fa fa-caret-right" aria-hidden="true"></i>Du lịch Phú Yên </a>
-                                                </p>
-                                            </div>
-                                            <div class="col-sm-3 col-6">
-                                                <p>
-                                                    <a href="#">
-                                                        <i class="fa fa-caret-right" aria-hidden="true"></i>Du lịch Hàn Quốc </a>
-                                                </p>
-                                                <p>
-                                                    <a href="#">
-                                                        <i class="fa fa-caret-right" aria-hidden="true"></i>Du lịch Nhật Bản </a>
-                                                </p>
-                                                <p>
-                                                    <a href="#">
-                                                        <i class="fa fa-caret-right" aria-hidden="true"></i>Du lịch Anh </a>
-                                                </p>
-                                                <p>
-                                                    <a href="#">
-                                                        <i class="fa fa-caret-right" aria-hidden="true"></i>Du lịch Nga </a>
-                                                </p>
-                                                <p>
-                                                    <a href="#">
-                                                        <i class="fa fa-caret-right" aria-hidden="true"></i>Du lịch Canada </a>
-                                                </p>
-                                                <p>
-                                                    <a href="#">
-                                                        <i class="fa fa-caret-right" aria-hidden="true"></i>Du lịch Mỹ </a>
-                                                </p>
-                                            </div>
-                                            <div class="col-sm-3 col-6">
-                                                <p>
-                                                    <a href="#">
-                                                        <i class="fa fa-caret-right" aria-hidden="true"></i>Du lịch Hà Nội </a>
-                                                </p>
-                                                <p>
-                                                    <a href="#">
-                                                        <i class="fa fa-caret-right" aria-hidden="true"></i>Du lịch Sa Pa </a>
-                                                </p>
-                                                <p>
-                                                    <a href="#">
-                                                        <i class="fa fa-caret-right" aria-hidden="true"></i>Du lịch Côn Đảo </a>
-                                                </p>
-                                                <p>
-                                                    <a href="#">
-                                                        <i class="fa fa-caret-right" aria-hidden="true"></i>Du lịch Phú Quốc </a>
-                                                </p>
-                                                <p>
-                                                    <a href="#">
-                                                        <i class="fa fa-caret-right" aria-hidden="true"></i>Du lịch Đà Nẵng </a>
-                                                </p>
-                                                <p>
-                                                    <a href="#">
-                                                        <i class="fa fa-caret-right" aria-hidden="true"></i>Du lịch Phú Yên </a>
-                                                </p>
-                                            </div>
-                                            <div class="col-sm-3 col-6">
-                                                <p>
-                                                    <a href="#">
-                                                        <i class="fa fa-caret-right" aria-hidden="true"></i>Du lịch Hàn Quốc </a>
-                                                </p>
-                                                <p>
-                                                    <a href="#">
-                                                        <i class="fa fa-caret-right" aria-hidden="true"></i>Du lịch Nhật Bản </a>
-                                                </p>
-                                                <p>
-                                                    <a href="#">
-                                                        <i class="fa fa-caret-right" aria-hidden="true"></i>Du lịch Anh </a>
-                                                </p>
-                                                <p>
-                                                    <a href="#">
-                                                        <i class="fa fa-caret-right" aria-hidden="true"></i>Du lịch Nga </a>
-                                                </p>
-                                                <p>
-                                                    <a href="#">
-                                                        <i class="fa fa-caret-right" aria-hidden="true"></i>Du lịch Canada </a>
-                                                </p>
-                                                <p>
-                                                    <a href="#">
-                                                        <i class="fa fa-caret-right" aria-hidden="true"></i>Du lịch Mỹ </a>
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div id="tabs-5" class="tab-part">
-                                    <div class="container">
-                                        <div class="row">
-                                            <div class="col-sm-3 col-6">
-                                                <p>
-                                                    <a href="#">
-                                                        <i class="fa fa-caret-right" aria-hidden="true"></i>Du lịch Hà Nội </a>
-                                                </p>
-                                                <p>
-                                                    <a href="#">
-                                                        <i class="fa fa-caret-right" aria-hidden="true"></i>Du lịch Sa Pa </a>
-                                                </p>
-                                                <p>
-                                                    <a href="#">
-                                                        <i class="fa fa-caret-right" aria-hidden="true"></i>Du lịch Côn Đảo </a>
-                                                </p>
-                                                <p>
-                                                    <a href="#">
-                                                        <i class="fa fa-caret-right" aria-hidden="true"></i>Du lịch Phú Quốc </a>
-                                                </p>
-                                                <p>
-                                                    <a href="#">
-                                                        <i class="fa fa-caret-right" aria-hidden="true"></i>Du lịch Đà Nẵng </a>
-                                                </p>
-                                                <p>
-                                                    <a href="#">
-                                                        <i class="fa fa-caret-right" aria-hidden="true"></i>Du lịch Phú Yên </a>
-                                                </p>
-                                            </div>
-                                            <div class="col-sm-3 col-6">
-                                                <p>
-                                                    <a href="#">
-                                                        <i class="fa fa-caret-right" aria-hidden="true"></i>Du lịch Hàn Quốc </a>
-                                                </p>
-                                                <p>
-                                                    <a href="#">
-                                                        <i class="fa fa-caret-right" aria-hidden="true"></i>Du lịch Nhật Bản </a>
-                                                </p>
-                                                <p>
-                                                    <a href="#">
-                                                        <i class="fa fa-caret-right" aria-hidden="true"></i>Du lịch Anh </a>
-                                                </p>
-                                                <p>
-                                                    <a href="#">
-                                                        <i class="fa fa-caret-right" aria-hidden="true"></i>Du lịch Nga </a>
-                                                </p>
-                                                <p>
-                                                    <a href="#">
-                                                        <i class="fa fa-caret-right" aria-hidden="true"></i>Du lịch Canada </a>
-                                                </p>
-                                                <p>
-                                                    <a href="#">
-                                                        <i class="fa fa-caret-right" aria-hidden="true"></i>Du lịch Mỹ </a>
-                                                </p>
-                                            </div>
-                                            <div class="col-sm-3 col-6">
-                                                <p>
-                                                    <a href="#">
-                                                        <i class="fa fa-caret-right" aria-hidden="true"></i>Du lịch Hà Nội </a>
-                                                </p>
-                                                <p>
-                                                    <a href="#">
-                                                        <i class="fa fa-caret-right" aria-hidden="true"></i>Du lịch Sa Pa </a>
-                                                </p>
-                                                <p>
-                                                    <a href="#">
-                                                        <i class="fa fa-caret-right" aria-hidden="true"></i>Du lịch Côn Đảo </a>
-                                                </p>
-                                                <p>
-                                                    <a href="#">
-                                                        <i class="fa fa-caret-right" aria-hidden="true"></i>Du lịch Phú Quốc </a>
-                                                </p>
-                                                <p>
-                                                    <a href="#">
-                                                        <i class="fa fa-caret-right" aria-hidden="true"></i>Du lịch Đà Nẵng </a>
-                                                </p>
-                                                <p>
-                                                    <a href="#">
-                                                        <i class="fa fa-caret-right" aria-hidden="true"></i>Du lịch Phú Yên </a>
-                                                </p>
-                                            </div>
-                                            <div class="col-sm-3 col-6">
-                                                <p>
-                                                    <a href="#">
-                                                        <i class="fa fa-caret-right" aria-hidden="true"></i>Du lịch Hàn Quốc </a>
-                                                </p>
-                                                <p>
-                                                    <a href="#">
-                                                        <i class="fa fa-caret-right" aria-hidden="true"></i>Du lịch Nhật Bản </a>
-                                                </p>
-                                                <p>
-                                                    <a href="#">
-                                                        <i class="fa fa-caret-right" aria-hidden="true"></i>Du lịch Anh </a>
-                                                </p>
-                                                <p>
-                                                    <a href="#">
-                                                        <i class="fa fa-caret-right" aria-hidden="true"></i>Du lịch Nga </a>
-                                                </p>
-                                                <p>
-                                                    <a href="#">
-                                                        <i class="fa fa-caret-right" aria-hidden="true"></i>Du lịch Canada </a>
-                                                </p>
-                                                <p>
-                                                    <a href="#">
-                                                        <i class="fa fa-caret-right" aria-hidden="true"></i>Du lịch Mỹ </a>
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div id="tabs-6" class="tab-part">
-                                    <div class="container">
-                                        <div class="row">
-                                            <div class="col-sm-3 col-6">
-                                                <p>
-                                                    <a href="#">
-                                                        <i class="fa fa-caret-right" aria-hidden="true"></i>Du lịch Hà Nội </a>
-                                                </p>
-                                                <p>
-                                                    <a href="#">
-                                                        <i class="fa fa-caret-right" aria-hidden="true"></i>Du lịch Sa Pa </a>
-                                                </p>
-                                                <p>
-                                                    <a href="#">
-                                                        <i class="fa fa-caret-right" aria-hidden="true"></i>Du lịch Côn Đảo </a>
-                                                </p>
-                                                <p>
-                                                    <a href="#">
-                                                        <i class="fa fa-caret-right" aria-hidden="true"></i>Du lịch Phú Quốc </a>
-                                                </p>
-                                                <p>
-                                                    <a href="#">
-                                                        <i class="fa fa-caret-right" aria-hidden="true"></i>Du lịch Đà Nẵng </a>
-                                                </p>
-                                                <p>
-                                                    <a href="#">
-                                                        <i class="fa fa-caret-right" aria-hidden="true"></i>Du lịch Phú Yên </a>
-                                                </p>
-                                            </div>
-                                            <div class="col-sm-3 col-6">
-                                                <p>
-                                                    <a href="#">
-                                                        <i class="fa fa-caret-right" aria-hidden="true"></i>Du lịch Hàn Quốc </a>
-                                                </p>
-                                                <p>
-                                                    <a href="#">
-                                                        <i class="fa fa-caret-right" aria-hidden="true"></i>Du lịch Nhật Bản </a>
-                                                </p>
-                                                <p>
-                                                    <a href="#">
-                                                        <i class="fa fa-caret-right" aria-hidden="true"></i>Du lịch Anh </a>
-                                                </p>
-                                                <p>
-                                                    <a href="#">
-                                                        <i class="fa fa-caret-right" aria-hidden="true"></i>Du lịch Nga </a>
-                                                </p>
-                                                <p>
-                                                    <a href="#">
-                                                        <i class="fa fa-caret-right" aria-hidden="true"></i>Du lịch Canada </a>
-                                                </p>
-                                                <p>
-                                                    <a href="#">
-                                                        <i class="fa fa-caret-right" aria-hidden="true"></i>Du lịch Mỹ </a>
-                                                </p>
-                                            </div>
-                                            <div class="col-sm-3 col-6">
-                                                <p>
-                                                    <a href="#">
-                                                        <i class="fa fa-caret-right" aria-hidden="true"></i>Du lịch Hà Nội </a>
-                                                </p>
-                                                <p>
-                                                    <a href="#">
-                                                        <i class="fa fa-caret-right" aria-hidden="true"></i>Du lịch Sa Pa </a>
-                                                </p>
-                                                <p>
-                                                    <a href="#">
-                                                        <i class="fa fa-caret-right" aria-hidden="true"></i>Du lịch Côn Đảo </a>
-                                                </p>
-                                                <p>
-                                                    <a href="#">
-                                                        <i class="fa fa-caret-right" aria-hidden="true"></i>Du lịch Phú Quốc </a>
-                                                </p>
-                                                <p>
-                                                    <a href="#">
-                                                        <i class="fa fa-caret-right" aria-hidden="true"></i>Du lịch Đà Nẵng </a>
-                                                </p>
-                                                <p>
-                                                    <a href="#">
-                                                        <i class="fa fa-caret-right" aria-hidden="true"></i>Du lịch Phú Yên </a>
-                                                </p>
-                                            </div>
-                                            <div class="col-sm-3 col-6">
-                                                <p>
-                                                    <a href="#">
-                                                        <i class="fa fa-caret-right" aria-hidden="true"></i>Du lịch Hàn Quốc </a>
-                                                </p>
-                                                <p>
-                                                    <a href="#">
-                                                        <i class="fa fa-caret-right" aria-hidden="true"></i>Du lịch Nhật Bản </a>
-                                                </p>
-                                                <p>
-                                                    <a href="#">
-                                                        <i class="fa fa-caret-right" aria-hidden="true"></i>Du lịch Anh </a>
-                                                </p>
-                                                <p>
-                                                    <a href="#">
-                                                        <i class="fa fa-caret-right" aria-hidden="true"></i>Du lịch Nga </a>
-                                                </p>
-                                                <p>
-                                                    <a href="#">
-                                                        <i class="fa fa-caret-right" aria-hidden="true"></i>Du lịch Canada </a>
-                                                </p>
-                                                <p>
-                                                    <a href="#">
-                                                        <i class="fa fa-caret-right" aria-hidden="true"></i>Du lịch Mỹ </a>
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section class="section_14">
-                <div class="gap-element" style="display:block; height:auto; padding-top:100px"></div>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-3 col-6">
-                            <h6>Book by Phone</h6>
-                            <h5 style="overflow: hidden;">
-                                <i class="fa fa-phone" aria-hidden="true"></i>0126 922 0162
-                            </h5>
-                            <p>Booking time: 0800 - 2000hrs</p>
-                        </div>
-                        <div class="col-md-3 col-6">
-                            <h6>Give your Feedback</h6>
-                            <h5 style="overflow: hidden;">
-                                <i class="fa fa-envelope" aria-hidden="true"></i>
-                                </i>demonhunter@gmail.com
-                            </h5>
-                            <p>Help us improve!</p>
-                        </div>
-                        <div class="col-md-3 col-6">
-                            <h6>Services and Support</h6>
-                            <h5 style="overflow: hidden;">
-                                <i class="fa fa-headphones" aria-hidden="true"></i>Support Center
-                            </h5>
-                            <p>Get your doubts cleared</p>
-                        </div>
-                        <div class="col-md-3 col-6">
-                            <h6>Our partners</h6>
-                            <span>
-                                <img src="images/logo-foot1.png">
-                            </span>
-                            <span style="margin-left: 20px;">
-                                <img src="images/logo-foot2.png">
-                            </span>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <hr style="width: 100%;">
-            <section class="section_15">
-                <div class="gap-element" style="display:block; height:auto; padding-top:50px"></div>
-                <div class="mid-footer container">
-                    <div class="mid-foot-title">
-                        <span>
-                            <a href="#">Trang chủ</a>| </span>
-                        <span>
-                            <a href="#">Giới thiệu</a>| </span>
-                        <span>
-                            <a href="#">Liên Hệ</a>| </span>
-                        <span>
-                            <a href="#">Đặt ngay</a>
-                        </span>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-7">
-                            <p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Terms & Privacy Policy eugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue.</p>
-                        </div>
-                        <div class="col-md-5" style="text-align: right;">
-                            <div style="display: inline-block;">
-                                <p>Your trustworthy partner for travel needs</p>
-                            </div>
-                            <div style="display: inline-block;">
-                                <img src="images/trust-logo.png">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="gap-element" style="display:block; height:auto; padding-top:50px"></div>
-            </section>
-            <section class="section_16">
-                <p>© All rights reserved. Thiết kế website</p>
-                <span>
-                    <img src="images/footer-last-logo.png" style="width: 20px;">
-                </span>
-                <span>
-                    <a href="#">Mona media</a>
-                </span>
-            </section>
-            <span id="myBtn">
-                <i class="fa fa-angle-up" aria-hidden="true"></i>
-            </span>
-        </footer>
-        <script type="text/javascript">
-            $(window).scroll(function() {
-                if ($(this).scrollTop()) {
-                    $('#myBtn').fadeIn();
-                    $('#menu-bar').fadeIn();
-                    $('#menu-bar').css({
-                        "top": "0px",
-                        "opacity": "0.9"
-                    });
-                    $('.submenu').css({
-                        "z-index": "99px",
-                        "opacity": "1"
-                    });
-                    $('#head-infor').css("display", "none");
-                } else {
-                    $('#myBtn').fadeOut();
-                    $('#menu-bar').css({
-                        "top": "36px",
-                        "opacity": "1"
-                    });
-                    $('.submenu').css({
-                        "z-index": "99px",
-                        "opacity": "1"
-                    });
-                    $('#head-infor').css("display", "block");
-                }
-            });
-            $("#myBtn").click(function() {
-                $("html, body").animate({
-                    scrollTop: 0
-                }, 700);
-            });
+                        <div class="room-descript">
 
-            function openNav() {
-                $('#mobible-menu').css({
-                    'backgroundColor': 'white',
-                    'z-index': '100',
-                    'width': '60%'
-                });
-                $('.mobible-menu').css({
-                    'backgroundColor': 'rgba(0,0,0,0.4)',
-                    'width': '100%',
-                    'position': 'fixed',
-                    'top': '0',
-                    'bottom': '0',
-                    'z-index': '90'
-                });
-                $('#close-div').css({
-                    'backgroundColor': 'rgba(0,0,0,0.4)',
-                    'width': '100%',
-                    'position': 'fixed',
-                    'top': '0',
-                    'bottom': '0'
-                })
-            }
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="book-part">
+                        <button type="button" class="btn btn-primary" onclick="bookForward()">Book This Room</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
 
-            function closeNav() {
-                $('#mobible-menu').css('width', '0');
-                $('.mobible-menu').css('width', '0');
-                console.log('aaaaaa');
-                $('#close-div').css('width', '0');
-            }
-            $(document).ready(function() {
-                $('.mobible-menu').click(closeNav());
-            });
-            $(function() {
-                $(".tabs").tabs();
-            });
-            $(function() {
-                $(".accordion").accordion();
-            });
-        </script>
-        <!-- Optional JavaScript -->
-        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-        <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    </body>
+    </footer>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
 </html>
