@@ -2,6 +2,34 @@ img{
     max-width: 100%;
 }
 
+#previous, #next{
+	max-width: 20px;
+	max-height: 20px;
+	border-radius: 50%;
+	z-index: 92;
+}
+
+#previous{
+	position: fixed;
+	top: 40%;
+	left: 50px;
+
+}
+
+#previous:hover, #next:hover{
+	cursor: pointer;
+}
+
+#previous:hover img, #next:hover img{
+    filter: brightness(2);
+}
+
+#next{
+	position: fixed;
+	top: 40%;
+	right: 50px;
+}
+
 .header-content, .footer-content{
     height: 200px;
     border: 1px solid #333;

@@ -6,6 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <script src="jquery.js"></script>
+    <link rel="icon" type="image/png" sizes="16x16" href="images/icon.png">
     <link rel="stylesheet" type="text/css"
         href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css?fbclid=IwAR20YljHUaRpmC_9YKoZPNr78eVvvkPLsulPJ-dX3uByDXrE9mL3Yhp65h8">
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
@@ -15,21 +16,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="styles.css">
-    <script>
-        function imgExpand(imgs) {
-            var expandImg = document.getElementById("expandedImg");
-            var imgText = document.getElementById("imgtext");
-            expandImg.src = imgs.src;
-            imgText.innerHTML = imgs.alt;
-            expandImg.parentElement.style.display = "block";
-            let black = document.getElementById("blackDeep");
-            black.style.display = "block";
-        }
 
-        function bookForward() {
-            window.location.href = "https://google.com/search?q=book+form"
-        }
-    </script>
     <title>Final Project</title>
 </head>
 
@@ -42,8 +29,14 @@
     <main>
         <section class="main-content">
             <div class="img-expand">
-                <div id="blackDeep" onclick="this.parentElement.style.display='none'"></div>
-                <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+                <div id="blackDeep" onclick="this.parentElement.style.display='none', clearTimeout(timeOut)"></div>
+                <span onclick="this.parentElement.style.display='none', clearTimeout(timeOut)" class="closebtn">&times;</span>
+                <div class="arrows" id="previous" onclick="onPrevious()" style="display: none;">
+                    <img src="images/next.png" alt="back" style="transform: scaleX(-1);">
+                </div>
+                <div class="arrows" id="next" onclick="onNext()" style="display: none;">
+                    <img src="images/next.png" alt="next">
+                </div>
                 <img id="expandedImg" style="width:100%">
                 <div id="imgtext"></div>
             </div>
@@ -51,6 +44,13 @@
                 <div class="row">
                     <div class="col-md-5">
                         <div class="img-part">
+                            <!-- This is where to insert room images -->
+                            <div id="main-pic" style="display: none;">
+                                <img src="images/double-bed-2.jpg" alt="double bed" id="db1">
+                                <img src="images/double-bed-3.jpg" alt="double bed" id="db2">
+                                <img src="images/double-bed.jpg" alt="double bed" id="db3">
+
+                            </div>
                             <img class="room-img" src="images/double-bed.jpg" alt="double bed"
                                 onclick="imgExpand(this)">
                             <span class="tooltiptext">Click to expand</span>
@@ -89,5 +89,83 @@
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
 </body>
+
+<script>
+    function imgExpand(imgs) {
+        resetTimeout();
+        var expandImg = document.getElementById("expandedImg");
+        var imgText = document.getElementById("imgtext");
+        expandImg.src = imgs.src;
+        imgText.innerHTML = imgs.alt;
+        expandImg.parentElement.style.display = "block";
+        let black = document.getElementById("blackDeep");
+        black.style.display = "block";
+        document.querySelectorAll(".arrows").forEach(a => a.style.display = "block");
+
+    }
+
+    function bookForward() {
+        window.location.href = "https://google.com/search?q=book+form"
+    }
+
+    let currentID = 1;
+    picNum = document.getElementById('main-pic').childElementCount;
+    function onNext() {
+        let changePic = document.getElementById('expandedImg');
+        let current = document.getElementById("db" + currentID);
+        if (current == null) {
+            let btn = document.getElementById('next');
+            btn.style.opacity = 0.8;
+            currentID = 1;
+            current = document.getElementById("db" + currentID);
+            changePic.src = current.src;
+            currentID++;
+            resetTimeout()
+            // $('#next').hover(function(){
+            //     $(this).css("cursor","not-allowed");
+            // });
+        }
+        else {
+            changePic.src = current.src
+            currentID++;
+            resetTimeout()
+        }
+
+    }
+
+    function onPrevious() {
+        let changePic = document.getElementById('expandedImg');
+        let current = document.getElementById("db" + currentID);
+        if (current == null) {
+            let btn = document.getElementById('previous');
+            btn.style.opacity = 0.8;
+            currentID = picNum;
+            current = document.getElementById("db" + currentID);
+            changePic.src = current.src;
+            currentID--;
+            resetTimeout()
+            // $('#previous').hover(function(){
+            //     $(this).css("cursor","not-allowed");
+            // });
+        }
+        else {
+            changePic.src = current.src
+            currentID--;
+            resetTimeout()
+        }
+
+    }
+    let timeOut = setTimeout(onNext, 3000);
+    function resetTimeout() {
+        if (timeOut) {
+            clearTimeout(timeOut);
+            timeOut = setTimeout(onNext, 3000);
+        }
+        else {
+            timeOut = setTimeout(onNext, 3000);
+        }
+    }
+
+</script>
 
 </html>
