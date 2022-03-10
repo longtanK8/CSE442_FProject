@@ -24,13 +24,34 @@
     <header>
         <div class="header-content">
             <p>put some words here as a menu bar</p>
+            <div class="main-menu">
+                <div class="room-type">
+                    <li>
+                        <a href="#">Book Room<span class="menu-span" onclick="openMenu()"><img src="images/next.png" alt="down"></span></a>
+                        <ul class="sub-menu">
+                            <a href="#single">Single Bed</a>
+                        </ul>
+                        <ul class="sub-menu">
+                            <a href="#double">Double Bed</a>
+                        </ul>
+                        <ul class="sub-menu">
+                            <a href="#quad">Quad Bed</a>
+                        </ul>
+                        <ul class="sub-menu">
+                            <a href="#queen">Queen Room</a>
+                        </ul>
+                    </li>
+                </div>
+
+            </div>
         </div>
     </header>
     <main>
         <section class="main-content">
             <div class="img-expand">
                 <div id="blackDeep" onclick="this.parentElement.style.display='none', clearTimeout(timeOut)"></div>
-                <span onclick="this.parentElement.style.display='none', clearTimeout(timeOut)" class="closebtn">&times;</span>
+                <span onclick="this.parentElement.style.display='none', clearTimeout(timeOut)"
+                    class="closebtn">&times;</span>
                 <div class="arrows" id="previous" onclick="onPrevious()" style="display: none;">
                     <img src="images/next.png" alt="back" style="transform: scaleX(-1);">
                 </div>
@@ -53,12 +74,20 @@
                             </div>
                             <img class="room-img" src="images/double-bed.jpg" alt="double bed"
                                 onclick="imgExpand(this)">
-                            <span class="tooltiptext">Click to expand</span>
+                            <span class="tooltiptext">Click to open gallery</span>
                         </div>
                     </div>
                     <div class="col-md-7">
                         <div class="room-title">
                             <h3 class="room-title-header">Double Bed</h3>
+                        </div>
+                        <div class="room-description">
+                            <p>Beatiful rooms with two beds or twin beds, the rooms can be assigned for a couple or 2
+                                adults and a chilld</p>
+                            <p><b>Rooms include: </b>1 twin bed or 2 beds, a toilet with full equipments, a TV, a small
+                                set of sofas</p>
+                            <p><b>Special: </b>A golf with river view.</p>
+                            <p class="price">500.000 vnd/day</p>
                         </div>
                         <div class="room-descript">
 
@@ -164,6 +193,37 @@
         else {
             timeOut = setTimeout(onNext, 3000);
         }
+    }
+
+    
+    function openMenu() {
+        let menu = document.getElementsByClassName('menu-span')[0];
+        let arrow = menu.childNodes[0];
+        let st = window.getComputedStyle(arrow, null);
+        let cssValue = st.getPropertyValue('transform');
+        console.log(cssValue);
+
+        var values = cssValue.split('(')[1],
+            values = values.split(')')[0],
+            values = values.split(',');
+
+        var a = values[0]; // 0.866025
+        var b = values[1]; // 0.5
+        var c = values[2]; // -0.5
+        var d = values[3]; // 0.866025
+
+        var angle = Math.round(Math.asin(b) * (180/Math.PI));
+        console.log(angle);
+
+        if(angle==90){
+            arrow.style.transform = 'rotate(0deg)';
+            document.querySelectorAll(".sub-menu").forEach(a => a.style.display = "none");
+        }else if(angle==0){
+            arrow.style.transform = 'rotate(90deg)';
+            document.querySelectorAll(".sub-menu").forEach(a => a.style.display = "block");
+        }
+
+
     }
 
 </script>
