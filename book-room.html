@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="jquery.js"></script>
+    <link rel="icon" type="image/png" sizes="16x16" href="images/icon.png">
+    <link rel="stylesheet" type="text/css"
+        href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css?fbclid=IwAR20YljHUaRpmC_9YKoZPNr78eVvvkPLsulPJ-dX3uByDXrE9mL3Yhp65h8">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+
+    <title>Booking</title>
+</head>
+
+<body>
+    <header>
+        <div class="header-content">
+            <p>put some words here as a menu bar</p>
+            <div class="main-menu">
+                <div class="room-type">
+                    <li>
+                        <a href="#">Book Room<span class="menu-span" onclick="openMenu()"><img src="images/next.png"
+                                    alt="down"></span></a>
+                        <ul class="sub-menu">
+                            <a href="#single" onclick="changeRoom(0)">Single Bed</a>
+                        </ul>
+                        <ul class="sub-menu">
+                            <a href="#double" onclick="changeRoom(1)">Double Bed</a>
+                        </ul>
+                        <ul class="sub-menu">
+                            <a href="#quad" onclick="changeRoom(2)">Quad Bed</a>
+                        </ul>
+                        <ul class="sub-menu">
+                            <a href="#queen" onclick="changeRoom(3)">Queen Room</a>
+                        </ul>
+                    </li>
+                </div>
+
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="main-booking-content">
+            <div class="book-title">
+                <h1>Book Your Room</h1>
+            </div>
+            <div class="form-fill">
+                <div class="booking">
+                    <div class="container">
+                        <div class="booking-form">
+                            <form action="" method="POST">
+                                <div class="row">
+                                    <div class="col-12 col-md-6">
+                                        <div class="form-left">
+                                            <label for="name">Họ tên</label>
+                                            <input id="name" type="text" name="name" placeholder="Full name" required>
+                                            <label for="arrive-day">Ngày đến</label>
+                                            <input id="arrive-day" type="date" name="arrive-day"
+                                                placeholder="mm/dd/yyyy" required="">
+                                            <label for="people">Số người</label>
+                                            <input id="people" type="number" name="people" placeholder=" ---" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                        <div class="form-right">
+                                            <label for="phone-number">Số điện thoại</label>
+                                            <input id="phone-number" type="text" name="phone-number"
+                                                placeholder="Phone number" required>
+                                            <label for="leave-day">Ngày đi</label>
+                                            <input id="leave-day" type="date" name="leave-day" placeholder="mm/dd/yyyy"
+                                                required="">
+                                            <label for="type-room">Chọn phòng</label>
+                                            <select id="type-room" name="roomtype" onchange="changeRoom()">
+                                                <option value="type1" selected="">Single Bed</option>
+                                                <option value="type2">Double Bed</option>
+                                                <option value="type3">Quad Bed</option>
+                                                <option value="type4">Queen Room</option>
+                                            </select>
+                                            <div id="room-show">
+                                                
+                                                <div class="main-pic" style="display: none;">
+                                                    <img src="images/single-bed.jpg" alt="single bed" id="type1">
+                                                    <img src="images/double-bed.jpg" alt="double bed" id="type2">
+                                                    <img src="images/quad-bed.jpg" alt="quad bed" id="type3">
+                                                    <img src="images/queen-room.jpg" alt="queen room" id="type4">
+                
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <img  alt="room-type" id="represent-img">
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <button type="submit">Book Room</button>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <button type="reset">Clear Form</button>
+                                    </div>
+                                </div>
+                                
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <p>put some words here as a footer part</p>
+        </div>
+    </footer>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
+<script>
+    changeRoom();
+    function changeRoom(){
+        let type = document.getElementById("type-room").value;
+        let img = document.getElementById(type);
+        console.log(img);
+        document.getElementById("represent-img").src = img.src;
+    }
+</script>
+
+</html>

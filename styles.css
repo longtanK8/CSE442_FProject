@@ -2,6 +2,20 @@ img{
     max-width: 100%;
 }
 
+button {
+    border: 1px solid black !important;
+    margin-top: 20px !important;
+    font-weight: bold !important;
+    width: 200px !important;
+    padding: 5px 20px !important;
+    color: white !important;
+    background-color: rgb(205, 182, 84) !important;
+}
+button:hover {
+    color: black !important;
+    background-color: rgb(164, 146, 67) !important;
+}
+
 .previous, .next{
 	max-width: 20px;
 	max-height: 20px;
@@ -167,4 +181,99 @@ img{
 
 .sub-menu{
     display: none;
+}
+
+/* Booking part */
+.book-title{
+    text-align: center;
+    padding-top: 30px;
+}
+.book-title h1{
+    color: #333;
+    font-weight: bolder;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.main-booking-content{
+    background-image: url(./images/booking-background.jpg);
+    background-repeat: none;
+    background-size: cover;
+}
+.booking {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 100px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#represent-img{
+    margin: auto;
+    margin-top: 20px;
+    border: 3px solid #ccc;
+    width: 600px;
+    height: 338px;
+}
+.booking h2 {
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'Merriweather', serif;
+    margin-bottom: 20px;
+    color: rgb(205, 182, 84)
+}
+.booking-form {
+    background-color: rgba(0, 0, 0, 0.3);
+    width: 800px;
+    padding: 40px 40px 40px 40px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#type-room{
+    min-width: 100%;
+}
+.form-left label {
+    color: white;
+    font-size: 16px;
+}
+.form-left input {
+    width: 100%;
+    margin-bottom: 10px;
+}
+.form-right label {
+    color: white;
+    width: 100%;
+    font-size: 16px;
+}
+.form-right select {
+    height: 30px;
+}
+.form-right input {
+    width: 100%;
+    margin-bottom: 10px;
+}
+.booking-form button {
+    border: 1px solid black;
+    margin-top: 20px;
+    font-weight: bold;
+    width: 200px;
+    padding: 5px 20px;
+    color: white;
+    background-color: rgb(205, 182, 84);
+}
+.booking-form .row:nth-child(3) {
+    text-align: center !important;
+    margin-top: 30px;
+}
+
+.booking-form .row:nth-child(3) .col-md-6:first-child {
+    padding-left: 120px;
+}
+
+.booking-form .row:nth-child(3) .col-md-6:last-child {
+    padding-right: 120px;
+}
+
+.booking-form button:hover {
+    color: black;
+    background-color: rgb(164, 146, 67);
 }
