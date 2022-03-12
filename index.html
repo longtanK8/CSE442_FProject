@@ -27,18 +27,19 @@
             <div class="main-menu">
                 <div class="room-type">
                     <li>
-                        <a href="#">Book Room<span class="menu-span" onclick="openMenu()"><img src="images/next.png" alt="down"></span></a>
+                        <a href="#">Book Room<span class="menu-span" onclick="openMenu()"><img src="images/next.png"
+                                    alt="down"></span></a>
                         <ul class="sub-menu">
-                            <a href="#single">Single Bed</a>
+                            <a href="#single" onclick="changeRoom(0)">Single Bed</a>
                         </ul>
                         <ul class="sub-menu">
-                            <a href="#double">Double Bed</a>
+                            <a href="#double" onclick="changeRoom(1)">Double Bed</a>
                         </ul>
                         <ul class="sub-menu">
-                            <a href="#quad">Quad Bed</a>
+                            <a href="#quad" onclick="changeRoom(2)">Quad Bed</a>
                         </ul>
                         <ul class="sub-menu">
-                            <a href="#queen">Queen Room</a>
+                            <a href="#queen" onclick="changeRoom(3)">Queen Room</a>
                         </ul>
                     </li>
                 </div>
@@ -48,55 +49,231 @@
     </header>
     <main>
         <section class="main-content">
-            <div class="img-expand">
-                <div id="blackDeep" onclick="this.parentElement.style.display='none', clearTimeout(timeOut)"></div>
-                <span onclick="this.parentElement.style.display='none', clearTimeout(timeOut)"
-                    class="closebtn">&times;</span>
-                <div class="arrows" id="previous" onclick="onPrevious()" style="display: none;">
-                    <img src="images/next.png" alt="back" style="transform: scaleX(-1);">
+            <div class="room-part">
+                <div class="img-expand">
+                    <div class="blackDeep" onclick="this.parentElement.style.display='none', clearTimeout(timeOut)"></div>
+                    <span onclick="this.parentElement.style.display='none', clearTimeout(timeOut)"
+                        class="closebtn">&times;</span>
+                    <div class="arrows previous" onclick="onPrevious()" style="display: none;">
+                        <img src="images/next.png" alt="back" style="transform: scaleX(-1);">
+                    </div>
+                    <div class="arrows next" onclick="onNext()" style="display: none;">
+                        <img src="images/next.png" alt="next">
+                    </div>
+                    <img class="expandedImg" style="width:100%">
+                    <div class="imgtext"></div>
                 </div>
-                <div class="arrows" id="next" onclick="onNext()" style="display: none;">
-                    <img src="images/next.png" alt="next">
-                </div>
-                <img id="expandedImg" style="width:100%">
-                <div id="imgtext"></div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-5">
-                        <div class="img-part">
-                            <!-- This is where to insert room images -->
-                            <div id="main-pic" style="display: none;">
-                                <img src="images/double-bed-2.jpg" alt="double bed" id="db1">
-                                <img src="images/double-bed-3.jpg" alt="double bed" id="db2">
-                                <img src="images/double-bed.jpg" alt="double bed" id="db3">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-5">
+                            <div class="img-part">
+                                <!-- This is where to insert room images -->
+                                <div class="main-pic" style="display: none;">
+                                    <img src="images/single-bed-2.jpg" alt="double bed" id="db01">
+                                    <img src="images/single-bed-3.jpg" alt="double bed" id="db02">
+                                    <img src="images/single-bed.jpg" alt="double bed" id="db03">
+                                </div>
+                                
+                                <img class="room-img" src="images/single-bed.jpg" alt="double bed"
+                                    onclick="imgExpand(this)">
+                                <span class="tooltiptext">Click to open gallery</span>
+                            </div>
+                        </div>
+                        <div class="col-md-7">
+                            <div class="room-title">
+                                <h3 class="room-title-header">Double Bed</h3>
+                            </div>
+                            <div class="room-description">
+                                <p>Beatiful rooms with two beds or twin beds, the rooms can be assigned for a couple or
+                                    2
+                                    adults and a chilld</p>
+                                <p><b>Rooms include: </b>1 twin bed or 2 beds, a toilet with full equipments, a TV, a
+                                    small
+                                    set of sofas</p>
+                                <p><b>Special: </b>A golf with river view.</p>
+                                <p class="price">500.000 vnd/day</p>
+                            </div>
+                            <div class="room-descript">
 
                             </div>
-                            <img class="room-img" src="images/double-bed.jpg" alt="double bed"
-                                onclick="imgExpand(this)">
-                            <span class="tooltiptext">Click to open gallery</span>
                         </div>
                     </div>
-                    <div class="col-md-7">
-                        <div class="room-title">
-                            <h3 class="room-title-header">Double Bed</h3>
-                        </div>
-                        <div class="room-description">
-                            <p>Beatiful rooms with two beds or twin beds, the rooms can be assigned for a couple or 2
-                                adults and a chilld</p>
-                            <p><b>Rooms include: </b>1 twin bed or 2 beds, a toilet with full equipments, a TV, a small
-                                set of sofas</p>
-                            <p><b>Special: </b>A golf with river view.</p>
-                            <p class="price">500.000 vnd/day</p>
-                        </div>
-                        <div class="room-descript">
-
+                    <div class="row">
+                        <div class="book-part">
+                            <button type="button" class="btn btn-primary" onclick="bookForward()">Book This
+                                Room</button>
                         </div>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="book-part">
-                        <button type="button" class="btn btn-primary" onclick="bookForward()">Book This Room</button>
+            </div>
+            <div class="room-part">
+                <div class="img-expand">
+                    <div class="blackDeep" onclick="this.parentElement.style.display='none', clearTimeout(timeOut)"></div>
+                    <span onclick="this.parentElement.style.display='none', clearTimeout(timeOut)"
+                        class="closebtn">&times;</span>
+                    <div class="arrows previous" onclick="onPrevious()" style="display: none;">
+                        <img src="images/next.png" alt="back" style="transform: scaleX(-1);">
+                    </div>
+                    <div class="arrows next" onclick="onNext()" style="display: none;">
+                        <img src="images/next.png" alt="next">
+                    </div>
+                    <img class="expandedImg" style="width:100%">
+                    <div class="imgtext"></div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-5">
+                            <div class="img-part">
+                                <!-- This is where to insert room images -->
+                                <div class="main-pic" style="display: none;">
+                                    <img src="images/double-bed-2.jpg" alt="double bed" id="db11">
+                                    <img src="images/double-bed-3.jpg" alt="double bed" id="db12">
+                                    <img src="images/double-bed.jpg" alt="double bed" id="db13">
+
+                                </div>
+                                <img class="room-img" src="images/double-bed.jpg" alt="double bed"
+                                    onclick="imgExpand(this)">
+                                <span class="tooltiptext">Click to open gallery</span>
+                            </div>
+                        </div>
+                        <div class="col-md-7">
+                            <div class="room-title">
+                                <h3 class="room-title-header">Double Bed</h3>
+                            </div>
+                            <div class="room-description">
+                                <p>Beatiful rooms with two beds or twin beds, the rooms can be assigned for a couple or
+                                    2
+                                    adults and a chilld</p>
+                                <p><b>Rooms include: </b>1 twin bed or 2 beds, a toilet with full equipments, a TV, a
+                                    small
+                                    set of sofas</p>
+                                <p><b>Special: </b>A golf with river view.</p>
+                                <p class="price">500.000 vnd/day</p>
+                            </div>
+                            <div class="room-descript">
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="book-part">
+                            <button type="button" class="btn btn-primary" onclick="bookForward()">Book This
+                                Room</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="room-part">
+                <div class="img-expand">
+                    <div class="blackDeep" onclick="this.parentElement.style.display='none', clearTimeout(timeOut)"></div>
+                    <span onclick="this.parentElement.style.display='none', clearTimeout(timeOut)"
+                        class="closebtn">&times;</span>
+                    <div class="arrows previous" onclick="onPrevious()" style="display: none;">
+                        <img src="images/next.png" alt="back" style="transform: scaleX(-1);">
+                    </div>
+                    <div class="arrows next" onclick="onNext()" style="display: none;">
+                        <img src="images/next.png" alt="next">
+                    </div>
+                    <img class="expandedImg" style="width:100%">
+                    <div class="imgtext"></div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-5">
+                            <div class="img-part">
+                                <!-- This is where to insert room images -->
+                                <div class="main-pic" style="display: none;">
+                                    <img src="images/quad-bed-2.jpg" alt="double bed" id="db21">
+                                    <img src="images/quad-bed-3.jpg" alt="double bed" id="db22">
+                                    <img src="images/quad-bed.jpg" alt="double bed" id="db23">
+
+                                </div>
+                                <img class="room-img" src="images/quad-bed.jpg" alt="double bed"
+                                    onclick="imgExpand(this)">
+                                <span class="tooltiptext">Click to open gallery</span>
+                            </div>
+                        </div>
+                        <div class="col-md-7">
+                            <div class="room-title">
+                                <h3 class="room-title-header">Double Bed</h3>
+                            </div>
+                            <div class="room-description">
+                                <p>Beatiful rooms with two beds or twin beds, the rooms can be assigned for a couple or
+                                    2
+                                    adults and a chilld</p>
+                                <p><b>Rooms include: </b>1 twin bed or 2 beds, a toilet with full equipments, a TV, a
+                                    small
+                                    set of sofas</p>
+                                <p><b>Special: </b>A golf with river view.</p>
+                                <p class="price">500.000 vnd/day</p>
+                            </div>
+                            <div class="room-descript">
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="book-part">
+                            <button type="button" class="btn btn-primary" onclick="bookForward()">Book This
+                                Room</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="room-part">
+                <div class="img-expand">
+                    <div class="blackDeep" onclick="this.parentElement.style.display='none', clearTimeout(timeOut)"></div>
+                    <span onclick="this.parentElement.style.display='none', clearTimeout(timeOut)"
+                        class="closebtn">&times;</span>
+                    <div class="arrows previous" onclick="onPrevious()" style="display: none;">
+                        <img src="images/next.png" alt="back" style="transform: scaleX(-1);">
+                    </div>
+                    <div class="arrows next" onclick="onNext()" style="display: none;">
+                        <img src="images/next.png" alt="next">
+                    </div>
+                    <img class="expandedImg" style="width:100%">
+                    <div class="imgtext"></div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-5">
+                            <div class="img-part">
+                                <!-- This is where to insert room images -->
+                                <div class="main-pic" style="display: none;">
+                                    <img src="images/queen-room-2.jpg" alt="double bed" id="db31">
+                                    <img src="images/queen-room-3.jpg" alt="double bed" id="db32">
+                                    <img src="images/queen-room.jpg" alt="double bed" id="db33">
+
+                                </div>
+                                <img class="room-img" src="images/queen-room.jpg" alt="double bed"
+                                    onclick="imgExpand(this)">
+                                <span class="tooltiptext">Click to open gallery</span>
+                            </div>
+                        </div>
+                        <div class="col-md-7">
+                            <div class="room-title">
+                                <h3 class="room-title-header">Double Bed</h3>
+                            </div>
+                            <div class="room-description">
+                                <p>Beatiful rooms with two beds or twin beds, the rooms can be assigned for a couple or
+                                    2
+                                    adults and a chilld</p>
+                                <p><b>Rooms include: </b>1 twin bed or 2 beds, a toilet with full equipments, a TV, a
+                                    small
+                                    set of sofas</p>
+                                <p><b>Special: </b>A golf with river view.</p>
+                                <p class="price">500.000 vnd/day</p>
+                            </div>
+                            <div class="room-descript">
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="book-part">
+                            <button type="button" class="btn btn-primary" onclick="bookForward()">Book This
+                                Room</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -122,12 +299,12 @@
 <script>
     function imgExpand(imgs) {
         resetTimeout();
-        var expandImg = document.getElementById("expandedImg");
-        var imgText = document.getElementById("imgtext");
+        var expandImg = document.getElementsByClassName("expandedImg")[currentRoomIndex];
+        var imgText = document.getElementsByClassName("imgtext")[currentRoomIndex];
         expandImg.src = imgs.src;
         imgText.innerHTML = imgs.alt;
         expandImg.parentElement.style.display = "block";
-        let black = document.getElementById("blackDeep");
+        let black = document.getElementsByClassName("blackDeep")[currentRoomIndex];
         black.style.display = "block";
         document.querySelectorAll(".arrows").forEach(a => a.style.display = "block");
 
@@ -136,17 +313,19 @@
     function bookForward() {
         window.location.href = "https://google.com/search?q=book+form"
     }
-
+    let currentRoomIndex = 0;
     let currentID = 1;
-    picNum = document.getElementById('main-pic').childElementCount;
+    picClass = document.getElementsByClassName('main-pic');
+    picNum = 0;
     function onNext() {
-        let changePic = document.getElementById('expandedImg');
-        let current = document.getElementById("db" + currentID);
+        let changePic = document.getElementsByClassName('expandedImg')[currentRoomIndex];
+        let current = document.getElementById("db" + currentRoomIndex + currentID);
+        console.log(current);
         if (current == null) {
-            let btn = document.getElementById('next');
+            let btn = document.getElementsByClassName('next')[currentRoomIndex];
             btn.style.opacity = 0.8;
             currentID = 1;
-            current = document.getElementById("db" + currentID);
+            current = document.getElementById("db" + currentRoomIndex + currentID);
             changePic.src = current.src;
             currentID++;
             resetTimeout()
@@ -163,13 +342,13 @@
     }
 
     function onPrevious() {
-        let changePic = document.getElementById('expandedImg');
-        let current = document.getElementById("db" + currentID);
+        let changePic = document.getElementsByClassName('expandedImg')[currentRoomIndex];
+        let current = document.getElementById("db" + currentRoomIndex + currentID);
         if (current == null) {
-            let btn = document.getElementById('previous');
+            let btn = document.getElementsByClassName('previous')[currentRoomIndex];
             btn.style.opacity = 0.8;
             currentID = picNum;
-            current = document.getElementById("db" + currentID);
+            current = document.getElementById(currentRoomIndex + "db" + currentRoomIndex + currentID);
             changePic.src = current.src;
             currentID--;
             resetTimeout()
@@ -195,7 +374,7 @@
         }
     }
 
-    
+
     function openMenu() {
         let menu = document.getElementsByClassName('menu-span')[0];
         let arrow = menu.childNodes[0];
@@ -212,19 +391,35 @@
         var c = values[2]; // -0.5
         var d = values[3]; // 0.866025
 
-        var angle = Math.round(Math.asin(b) * (180/Math.PI));
+        var angle = Math.round(Math.asin(b) * (180 / Math.PI));
         console.log(angle);
 
-        if(angle==90){
+        if (angle == 90) {
             arrow.style.transform = 'rotate(0deg)';
             document.querySelectorAll(".sub-menu").forEach(a => a.style.display = "none");
-        }else if(angle==0){
+        } else if (angle == 0) {
             arrow.style.transform = 'rotate(90deg)';
             document.querySelectorAll(".sub-menu").forEach(a => a.style.display = "block");
         }
 
 
     }
+    changeRoom(0);
+    function changeRoom(index){
+        picNum = picClass[index].childElementCount;
+        currentRoomIndex = index;
+        console.log(index)
+        console.log(document.getElementsByClassName('room-part'));
+        let roomList = document.getElementsByClassName('room-part');
+        for (room of roomList){
+            room.style.display = 'none';
+        }
+        currentRoom = roomList[index];
+        console.log(currentRoom);
+        currentRoom.style.display = 'block';
+    }
+
+    
 
 </script>
 

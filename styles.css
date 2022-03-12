@@ -2,25 +2,25 @@ img{
     max-width: 100%;
 }
 
-#previous, #next{
+.previous, .next{
 	max-width: 20px;
 	max-height: 20px;
 	border-radius: 50%;
 	z-index: 92;
 }
 
-#previous{
+.previous{
 	position: fixed;
 	top: 40%;
 	left: 50px;
 
 }
 
-#previous:hover, #next:hover{
+.previous:hover, .next:hover{
 	cursor: pointer;
 }
 
-#next{
+.next{
 	position: fixed;
 	top: 40%;
 	right: 50px;
@@ -67,7 +67,7 @@ img{
     max-width: 70%;
 }
 
-#imgtext {
+.imgtext {
     position: fixed;
     bottom: 75px;
     right: 15%;
@@ -76,7 +76,7 @@ img{
     z-index: 91;
 }
 
-#expandedImg{
+.expandedImg{
     position: fixed;
     top: 50px ;
     max-width: 74%;
@@ -96,7 +96,7 @@ img{
     to {transform: scale(1);}
 }
 
-#blackDeep{
+.blackDeep{
     position: fixed;
     top: 0px ;
     bottom: 0px;
