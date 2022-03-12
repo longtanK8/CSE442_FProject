@@ -7,8 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <script src="jquery.js"></script>
     <link rel="icon" type="image/png" sizes="16x16" href="images/icon.png">
-    <link rel="stylesheet" type="text/css"
-        href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css?fbclid=IwAR20YljHUaRpmC_9YKoZPNr78eVvvkPLsulPJ-dX3uByDXrE9mL3Yhp65h8">
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
@@ -16,6 +14,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/fontawesome.min.css" integrity="sha512-8Vtie9oRR62i7vkmVUISvuwOeipGv8Jd+Sur/ORKDD5JiLgTGeBSkI3ISOhc730VGvA5VVQPwKIKlmi+zMZ71w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <title>Final Project</title>
 </head>
@@ -30,13 +29,13 @@
                         <a href="#">Book Room<span class="menu-span" onclick="openMenu()"><img src="images/next.png"
                                     alt="down"></span></a>
                         <ul class="sub-menu">
-                            <a href="#single" onclick="changeRoom(0)">Single Bed</a>
+                            <a href="#single" onclick="changeRoom(0)">Single Room</a>
                         </ul>
                         <ul class="sub-menu">
-                            <a href="#double" onclick="changeRoom(1)">Double Bed</a>
+                            <a href="#double" onclick="changeRoom(1)">Double Room</a>
                         </ul>
                         <ul class="sub-menu">
-                            <a href="#quad" onclick="changeRoom(2)">Quad Bed</a>
+                            <a href="#quad" onclick="changeRoom(2)">Quad Room</a>
                         </ul>
                         <ul class="sub-menu">
                             <a href="#queen" onclick="changeRoom(3)">Queen Room</a>
@@ -69,26 +68,26 @@
                             <div class="img-part">
                                 <!-- This is where to insert room images -->
                                 <div class="main-pic" style="display: none;">
-                                    <img src="images/single-bed-2.jpg" alt="Single bed" id="db01">
-                                    <img src="images/single-bed-3.jpg" alt="Single bed" id="db02">
-                                    <img src="images/single-bed.jpg" alt="Single bed" id="db03">
+                                    <img src="images/single-bed-2.jpg" alt="Single Room" id="db01">
+                                    <img src="images/single-bed-3.jpg" alt="Single Room" id="db02">
+                                    <img src="images/single-bed.jpg" alt="Single Room" id="db03">
                                 </div>
                                 
-                                <img class="room-img" src="images/single-bed.jpg" alt="Single bed"
+                                <img class="room-img" src="images/single-bed.jpg" alt="Single Room"
                                     onclick="imgExpand(this)">
                                 <span class="tooltiptext">Click to open gallery</span>
                             </div>
                         </div>
                         <div class="col-md-7">
                             <div class="room-title">
-                                <h3 class="room-title-header">Single Bed</h3>
+                                <h3 class="room-title-header">Single Room</h3>
                             </div>
                             <div class="room-description">
                                 <p>Beatiful rooms with one bed, the rooms can be assigned for one customer, suitable for ones who travels around.</p>
                                 <p><b>Rooms include: </b>1 bed, a toilet with full equipments, a TV, a
                                     small set of sofas</p>
                                 <p><b>Special: </b>A river view or a lake view.</p>
-                                <p class="price">400,000 vnd/day</p>
+                                <p class="price"><b>Price: </b><i class="fa-solid fa-dollar-sign"></i>20</p>
                             </div>
                             <div class="room-descript">
 
@@ -123,19 +122,19 @@
                             <div class="img-part">
                                 <!-- This is where to insert room images -->
                                 <div class="main-pic" style="display: none;">
-                                    <img src="images/double-bed-2.jpg" alt="Double bed" id="db11">
-                                    <img src="images/double-bed-3.jpg" alt="Double bed" id="db12">
-                                    <img src="images/double-bed.jpg" alt="Double bed" id="db13">
+                                    <img src="images/double-bed-2.jpg" alt="Double Room" id="db11">
+                                    <img src="images/double-bed-3.jpg" alt="Double Room" id="db12">
+                                    <img src="images/double-bed.jpg" alt="Double Room" id="db13">
 
                                 </div>
-                                <img class="room-img" src="images/double-bed.jpg" alt="Double bed"
+                                <img class="room-img" src="images/double-bed.jpg" alt="Double Room"
                                     onclick="imgExpand(this)">
                                 <span class="tooltiptext">Click to open gallery</span>
                             </div>
                         </div>
                         <div class="col-md-7">
                             <div class="room-title">
-                                <h3 class="room-title-header">Double Bed</h3>
+                                <h3 class="room-title-header">Double Room</h3>
                             </div>
                             <div class="room-description">
                                 <p>Beatiful rooms with two beds or twin beds, the rooms can be assigned for a couple or
@@ -145,7 +144,7 @@
                                     small
                                     set of sofas</p>
                                 <p><b>Special: </b>A golf with river view.</p>
-                                <p class="price">700,000 vnd/day</p>
+                                <p class="price"><b>Price: </b><i class="fa-solid fa-dollar-sign"></i>30</p>
                             </div>
                             <div class="room-descript">
 
@@ -180,19 +179,19 @@
                             <div class="img-part">
                                 <!-- This is where to insert room images -->
                                 <div class="main-pic" style="display: none;">
-                                    <img src="images/quad-bed-2.jpg" alt="Quad bed" id="db21">
-                                    <img src="images/quad-bed-3.jpg" alt="Quad bed" id="db22">
-                                    <img src="images/quad-bed.jpg" alt="Quad bed" id="db23">
+                                    <img src="images/quad-bed-2.jpg" alt="Quad Room" id="db21">
+                                    <img src="images/quad-bed-3.jpg" alt="Quad Room" id="db22">
+                                    <img src="images/quad-bed.jpg" alt="Quad Room" id="db23">
 
                                 </div>
-                                <img class="room-img" src="images/quad-bed.jpg" alt="Quad bed"
+                                <img class="room-img" src="images/quad-bed.jpg" alt="Quad Room"
                                     onclick="imgExpand(this)">
                                 <span class="tooltiptext">Click to open gallery</span>
                             </div>
                         </div>
                         <div class="col-md-7">
                             <div class="room-title">
-                                <h3 class="room-title-header">Quad Bed</h3>
+                                <h3 class="room-title-header">Quad Room</h3>
                             </div>
                             <div class="room-description">
                                 <p>Large rooms with 4 beds or 2 twin beds, the rooms can be assigned for four customers or
@@ -200,7 +199,7 @@
                                 <p><b>Rooms include: </b>2 twin beds or 4 beds, 2 toilets with full equipments, 2 TV, a
                                     big set of sofas</p>
                                 <p><b>Special: </b>A hill with woods view.</p>
-                                <p class="price">1,200,000 vnd/day</p>
+                                <p class="price"><b>Price: </b><i class="fa-solid fa-dollar-sign"></i>100</p>
                             </div>
                             <div class="room-descript">
 
@@ -235,12 +234,12 @@
                             <div class="img-part">
                                 <!-- This is where to insert room images -->
                                 <div class="main-pic" style="display: none;">
-                                    <img src="images/queen-room-2.jpg" alt="Queen room" id="db31">
-                                    <img src="images/queen-room-3.jpg" alt="Queen room" id="db32">
-                                    <img src="images/queen-room.jpg" alt="Queen room" id="db33">
+                                    <img src="images/queen-room-2.jpg" alt="Queen Room" id="db31">
+                                    <img src="images/queen-room-3.jpg" alt="Queen Room" id="db32">
+                                    <img src="images/queen-room.jpg" alt="Queen Room" id="db33">
 
                                 </div>
-                                <img class="room-img" src="images/queen-room.jpg" alt="Queen room"
+                                <img class="room-img" src="images/queen-room.jpg" alt="Queen Room"
                                     onclick="imgExpand(this)">
                                 <span class="tooltiptext">Click to open gallery</span>
                             </div>
@@ -255,7 +254,7 @@
                                     medium set of sofas.</p>
                                 <p><b>Extra: </b>great decoration with pictures of British Royal from Middle Ages.</p>
                                 <p><b>Special: </b>A golf with river view from a higher place.</p>
-                                <p class="price">1,600,000 - 2,000,000 vnd/day</p>
+                                <p class="price"><b>Price: </b><i class="fa-solid fa-dollar-sign"></i>120</p>
                             </div>
                             <div class="room-descript">
 

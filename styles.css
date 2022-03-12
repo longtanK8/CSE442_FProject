@@ -4,10 +4,9 @@ img{
 
 button {
     border: 1px solid black !important;
-    margin-top: 20px !important;
     font-weight: bold !important;
-    width: 200px !important;
-    padding: 5px 20px !important;
+    width: 150px !important;
+    padding: 5px 10px !important;
     color: white !important;
     background-color: rgb(205, 182, 84) !important;
 }
@@ -15,7 +14,18 @@ button:hover {
     color: black !important;
     background-color: rgb(164, 146, 67) !important;
 }
-
+.main-content {
+    background-color: #9099a2;
+    border: 2px solid black;
+    padding: 30px;
+}
+.room-title-header {
+    color: #e1aa5c;
+    font-weight: bold;
+}
+.room-description {
+    color: wheat;
+}
 .previous, .next{
 	max-width: 20px;
 	max-height: 20px;
@@ -162,7 +172,7 @@ button:hover {
 .book-part{
     margin-left: auto;
     margin-right: auto;
-    margin-top: 30px;
+    margin-top: 20px;
 }
 
 .price{
