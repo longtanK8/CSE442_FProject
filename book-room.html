@@ -56,7 +56,7 @@
                 <div class="booking">
                     <div class="container">
                         <div class="booking-form">
-                            <form action="" method="POST">
+                            <form action="" method="POST" onreset="onReset()">
                                 <div class="row">
                                     <div class="col-12 col-md-6">
                                         <div class="form-left">
@@ -110,7 +110,7 @@
                                     <div class="container">
                                         <div class="row">
                                             <div class="col-md-6">
-                                                <input type="checkbox" id="breakfast">
+                                                <input type="checkbox" id="breakfast" checked="">
                                                 <label for="breakfast">Free Breakfast</label>
                                             </div>
                                             <div class="col-md-6">
@@ -136,7 +136,7 @@
                                         <button type="submit">Book Room</button>
                                     </div>
                                     <div class="col-md-6">
-                                        <button type="reset" onclick="changeRoom()">Clear Form</button>
+                                        <button type="reset">Clear Form</button>
                                     </div>
                                 </div>
                                 
@@ -170,16 +170,22 @@
     function changeRoom(){
         let type = document.getElementById("type-room").value;
         let img = document.getElementById(type);
-        console.log(img);
         document.getElementById("represent-img").src = img.src;
         document.querySelectorAll('input[type="checkbox"]').forEach(a=>isChecked(a, type));
         
     }
+
+    function onReset(){
+        let img = document.getElementById('single');
+        document.getElementById("represent-img").src = img.src;
+    }
     $('input[type="checkbox"').css('cursor','not-allowed');
 
     function isChecked(element, type){
+        
         if(type =='single'){
             element.checked = false;
+            
             if(element.id == 'breakfast'){
                 element.checked = true;
             }
