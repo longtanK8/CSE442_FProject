@@ -27,27 +27,27 @@ button:hover {
     color: wheat;
 }
 .previous, .next{
-	max-width: 20px;
-	max-height: 20px;
-	border-radius: 50%;
-	z-index: 92;
+    max-width: 20px;
+    max-height: 20px;
+    border-radius: 50%;
+    z-index: 92;
 }
 
 .previous{
-	position: fixed;
-	top: 40%;
-	left: 50px;
+    position: fixed;
+    top: 40%;
+    left: 50px;
 
 }
 
 .previous:hover, .next:hover{
-	cursor: pointer;
+    cursor: pointer;
 }
 
 .next{
-	position: fixed;
-	top: 40%;
-	right: 50px;
+    position: fixed;
+    top: 40%;
+    right: 50px;
 }
 
 .header-content, .footer-content{
@@ -266,19 +266,24 @@ button:hover {
     margin-bottom: 10px;
 }
 .booking-form button {
+    border: 1px solid black;
     margin-top: 20px;
-
+    font-weight: bold;
+    width: 200px;
+    padding: 5px 20px;
+    color: white;
+    background-color: rgb(205, 182, 84);
 }
-.booking-form .row:nth-child(4){
+.booking-form .row:nth-child(3) {
     text-align: center !important;
     margin-top: 30px;
 }
 
-.booking-form .row:nth-child(4) .col-md-6:first-child {
+.booking-form .row:nth-child(3) .col-md-6:first-child {
     padding-left: 120px;
 }
 
-.booking-form .row:nth-child(4) .col-md-6:last-child {
+.booking-form .row:nth-child(3) .col-md-6:last-child {
     padding-right: 120px;
 }
 
@@ -286,26 +291,406 @@ button:hover {
     color: black;
     background-color: rgb(164, 146, 67);
 }
-#attached-services{
-    border: 1px solid #ccc;
 
-}
 
-#attached-services label, legend{
-    color: #fff;
-    padding: 0 10px 0 10px;
-    
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
+.top-header {
+    background-color: black;
+    height: 36px;
+    line-height: 36px;
+    border-bottom: 1px solid gray;
 }
-
-legend.scheduler-border {
-    width:inherit; /* Or auto */
-    padding:0 10px; /* To give a bit of padding on the left and right */
-    border-bottom:none;
+.top-header-content1 {
+    line-height: 36px;
+    padding-left: 60px;
+    font-size: 16px;
+    color: gray;
 }
-
-input[type="checkbox"]:disabled{
-    filter: invert(100%) hue-rotate(18deg) brightness(10.0);
+.top-header-content2 {
+    line-height: 36px;
+    margin-left: -50px;
+    font-size: 16px;
+    color: gray;
 }
-input[type="checkbox"]:checked{
-    filter: invert(100%) hue-rotate(18deg) brightness(5.0);
+.top-header-content1 i {
+    margin-right: 5px;
+    line-height: 36px;
+    font-size: 16px;
+    color: rgb(205, 182, 84);
+}
+.top-header-content2 i {
+    margin-right: 5px;
+    line-height: 36px;
+    font-size: 16px;
+    color: rgb(205, 182, 84);
+}
+.top-header-fontawesome {
+    margin-left: 45%;
+}
+.top-header-fontawesome a > i {
+    margin-left: 5px;
+    line-height: 36px;
+    font-size: 16px;
+    color: rgb(205, 182, 84);
+}
+.top-header-account a > i{
+    margin-left: 5px;
+    line-height: 36px;
+    font-size: 16px;
+    color: rgb(205, 182, 84);
+}
+.top-header-account a {
+    color: rgb(205, 182, 84);
+}
+.nav {
+    justify-content: center;
+    background-color: black;
+}
+.nav > a {
+    display: inline-block;
+    padding-top: 5px;
+    vertical-align: top;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+.nav a > img {
+    width: 100px;
+    margin-left: 20px;
+}
+.menu {
+    position: relative;
+    margin-left: 250px;
+    margin-right: -50px;
+    height: 80px;
+}
+.menu > li {
+    text-align: center;
+    margin-left: 15px;
+    display: inline-block;
+    vertical-align: top;
+    list-style-type: none;
+}
+.menu > li > a {
+    padding-top: 5px;
+    margin: 0;
+    color: gray;
+    font-weight: bold;
+    text-transform: uppercase;
+    height: 80px;
+    line-height: 80px;
+    text-decoration: none;
+    text-align: center;
+    display: inline-block;
+}
+.menu > li:hover > a {
+    color: rgb(205, 182, 84);
+    text-decoration: none;
+}
+.menu .active > a {
+    color: rgb(205, 182, 84);
+    text-decoration: none;
+}
+.list > a:after {
+    content: "\f107";
+    padding-left: 5px;
+    font-family: "FontAwesome";
+}
+.sub-menu {
+    display: none;
+    box-shadow: 0 0 5px 1px #ddd;
+    position: absolute;
+    z-index: 1;
+    margin-left: 10px;
+    margin-right: 10px;
+    background-color: white;
+}
+.sub-menu li {
+    margin-left: -40px;
+    margin-right: 0px;
+    list-style-type: none;
+    text-align: left !important;
+}
+.sub-menu a {
+    color: gray ;
+    display: block ;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    height: 50px ;
+    line-height: 50px;
+    text-align: left ;
+}
+.nav li:hover ul {
+    display: block;
+}
+.sub-menu li:hover > a {
+    width: 100%;
+    color: rgb(205, 182, 84);
+    text-decoration: none;
+    background-color: black;
+}
+.slider img {
+    width: 100%;
+    height: 700px;
+}
+.slider > .container-fluid {
+    padding-left: 0;
+    padding-right: 0;
+}
+.carousel-caption {
+    top: 220px; 
+}
+.carousel-caption h1 {
+    font-size: 60px;
+    font-family: 'Merriweather', serif;
+    width: 760px;
+    margin-left: auto;
+    margin-right: auto;
+    color: rgb(197, 161, 59);
+    background-color: rgba(1, 1, 1, 0.4);
+}
+.carousel-caption p {
+    margin-top: 20px;
+    font-size: 20px;
+    color: white;
+    background-color: rgba(1, 1, 1, 0.4);
+}
+.about {
+    background-color: white;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.about > h1 {
+    font-weight: bold;
+    text-align: center;
+    font-size: 30px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    font-family: 'Merriweather', serif;
+    color: rgb(205, 182, 84) ;
+    text-transform: uppercase;
+}
+.about img {
+    width: 1080px;
+    height: 540px;
+}
+.about-content {
+    width: 1080px;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-right: 10px;
+}
+ .about-content > button {
+    width: 140px;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 5px;
+    color: rgb(205, 182, 84) ;
+    background-color: white;
+    border: 3px solid rgb(205, 182, 84);
+ }
+ .about-content > button:hover {
+    background-color: rgb(205, 182, 84);
+    color: black;
+ }
+.about-content h1 {
+    font-weight: bold;
+    color: black;
+    font-family: 'Merriweather', serif;
+}
+.about-content p {
+    color: gray;
+}
+.about-image img {
+    width: 100%;
+    max-width: 550px;
+}
+.service-1 {
+    padding-top: 15px;
+    padding-bottom: 70px;
+    background-color: white;
+}
+.service-1 h1 {
+    font-weight: bold;
+    text-align: center;
+    font-size: 30px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    font-family: 'Merriweather', serif;
+    color: rgb(205, 182, 84) ;
+    text-transform: uppercase;
+}
+.service-1 p {
+    font-size: 16px;
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: black;
+    padding-bottom: 30px;
+    font-family: 'Merriweather', serif;
+}
+.service-1-item-image img {
+    width: 100%;
+}
+.service-1-item-content {
+    text-align: center;
+    background-color: rgb(28, 28, 28);
+    height: 200px;
+}
+.service-1-item-content > h3 {
+    padding-top: 15px;
+    font-size: 24px;
+    padding-bottom: 15px;
+    color: rgb(205, 182, 84);
+}
+.service-1-item-content > p {
+    color: white !important;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    font-family: none !important;
+    padding-bottom: 20px !important;
+}
+.service-1-item-button button:first-of-type {
+    width: 50%;
+    float: left;
+    padding: 10px;
+    background-color: gray;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    border: none;
+    border-right: 1px solid white !important;
+}
+.service-1-item-button button:last-of-type {
+    width: 50%;
+    float: right;
+    padding: 10px;
+    background-color: gray;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    border: none;
+    border-left: 1px solid white !important;
+}
+.service-1-item-button button:hover {
+    background-color: rgb(100, 100, 100);
+}
+.service-2 {
+    padding-top: 80px;
+    padding-bottom: 50px;
+}
+.service-2-item {
+    margin-bottom: 30px;
+}
+.service-2-fontawesome i {
+    font-size: 50px;
+    color: rgb(205, 182, 84) ;
+}
+.service-2-item-content {
+    margin-left: 20px;
+    padding-right: 10px;
+}
+.service-2-item-content h3 {
+    font-size: 24px;
+}
+.service-2-item-content p {
+    font-size: 16px;
+    color: gray;
+}
+.footer {
+    padding-top: 50px;
+    padding-bottom: 30px;
+    background-color: black;
+}
+.footer-item1 img {
+    cursor: pointer;
+    width: 150px;
+}
+.footer-item1 p {
+    margin-top: 20px;
+    color: gray;
+    font-size: 16px;
+}
+.footer-fontawesome a > i {
+    margin-left: 10px;
+    font-size: 20px !important;
+    color: rgb(205, 182, 84) !important;
+}
+.footer-item2 h4 {
+    padding-bottom: 20px;
+    font-family: 'Merriweather', serif;
+    color: rgb(205, 182, 84);
+    font-size: 24px;
+    font-weight: bold;
+}
+.footer-item2 p {
+    font-size: 16px;
+    color: gray;
+}
+.footer-item2 p > i {
+    margin-right: 5px;
+    font-size: 20px !important;
+    color: rgb(205, 182, 84) !important;
+}
+.footer-item2 img {
+    width: 200px;
+    margin-left: 15px;
+}
+.footer-item3 h4 {
+    padding-bottom: 20px;
+    font-family: 'Merriweather', serif;
+    color: rgb(205, 182, 84);
+    font-size: 24px;
+    font-weight: bold;
+}
+.footer-item3 p {
+    font-size: 16px;
+    color: gray;
+}
+#emailform button {
+    background-color: black;
+    color: gray;
+    border: none;
+}
+#emailform button:hover {
+    color: rgb(205, 182, 84);
+}
+.crossline {
+    display: block;
+    width: 100%;
+    border-top: 1px solid gray;
+}
+.copyright {
+    line-height: 40px;
+    margin-bottom: 0;
+    background-color: black;
+    text-align: center;
+    color: gray;
+}
+.go-top {
+    display: none;
+    cursor: pointer;
+    line-height: 50px;
+    background-color: black;
+    text-align: center;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+    border: 2px solid gray;
+}
+.go-top i {
+    padding: 5px;
+    font-weight: bold;
+    font-size: 24px;
+    color: gray;
+}
+.go-top:hover {
+    background-color: rgb(197, 161, 59);
+    box-shadow: 0 10px 40px 0 rgba(255,255,255,0.6);
 }
