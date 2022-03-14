@@ -312,7 +312,6 @@
     function onNext() {
         let changePic = document.getElementsByClassName('expandedImg')[currentRoomIndex];
         let current = document.getElementById("db" + currentRoomIndex + currentID);
-        console.log(current);
         if (current == null) {
             let btn = document.getElementsByClassName('next')[currentRoomIndex];
             btn.style.opacity = 0.8;
@@ -340,7 +339,7 @@
             let btn = document.getElementsByClassName('previous')[currentRoomIndex];
             btn.style.opacity = 0.8;
             currentID = picNum;
-            current = document.getElementById(currentRoomIndex + "db" + currentRoomIndex + currentID);
+            current = document.getElementById("db" + currentRoomIndex + currentID);
             changePic.src = current.src;
             currentID--;
             resetTimeout()

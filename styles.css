@@ -266,28 +266,46 @@ button:hover {
     margin-bottom: 10px;
 }
 .booking-form button {
-    border: 1px solid black;
     margin-top: 20px;
-    font-weight: bold;
-    width: 200px;
-    padding: 5px 20px;
-    color: white;
-    background-color: rgb(205, 182, 84);
+
 }
-.booking-form .row:nth-child(3) {
+.booking-form .row:nth-child(4){
     text-align: center !important;
     margin-top: 30px;
 }
 
-.booking-form .row:nth-child(3) .col-md-6:first-child {
+.booking-form .row:nth-child(4) .col-md-6:first-child {
     padding-left: 120px;
 }
 
-.booking-form .row:nth-child(3) .col-md-6:last-child {
+.booking-form .row:nth-child(4) .col-md-6:last-child {
     padding-right: 120px;
 }
 
 .booking-form button:hover {
     color: black;
     background-color: rgb(164, 146, 67);
+}
+#attached-services{
+    border: 1px solid #ccc;
+
+}
+
+#attached-services label, legend{
+    color: #fff;
+    padding: 0 10px 0 10px;
+    
+}
+
+legend.scheduler-border {
+    width:inherit; /* Or auto */
+    padding:0 10px; /* To give a bit of padding on the left and right */
+    border-bottom:none;
+}
+
+input[type="checkbox"]:disabled{
+    filter: invert(100%) hue-rotate(18deg) brightness(10.0);
+}
+input[type="checkbox"]:checked{
+    filter: invert(100%) hue-rotate(18deg) brightness(5.0);
 }
