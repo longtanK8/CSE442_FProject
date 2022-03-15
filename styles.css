@@ -274,16 +274,16 @@ button:hover {
     color: white;
     background-color: rgb(205, 182, 84);
 }
-.booking-form .row:nth-child(3) {
+.booking-form .row:nth-child(4) {
     text-align: center !important;
     margin-top: 30px;
 }
 
-.booking-form .row:nth-child(3) .col-md-6:first-child {
+.booking-form .row:nth-child(4) .col-md-6:first-child {
     padding-left: 120px;
 }
 
-.booking-form .row:nth-child(3) .col-md-6:last-child {
+.booking-form .row:nth-child(4) .col-md-6:last-child {
     padding-right: 120px;
 }
 
